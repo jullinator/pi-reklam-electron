@@ -1,0 +1,25 @@
+body{
+  overflow:hidden;
+  margin:0;
+}
+
+.active-image {
+  animation-name:fadeIn;
+  animation-duration: 1s;
+}
+
+.hidden-image {
+  visibility:hidden;
+  animation-name:fadeOut;
+  animation-duration: 1;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; visibility: hidden; }
+    to { opacity: 1; visibility: visible; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; visibility: visible; }
+    to { opacity: 0; visibility: hidden; }
+}

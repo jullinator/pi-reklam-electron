@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css" ></link>
+  </head>
+  <body>
+    <div id="app">
+      <div id="slide-container">
+        <img v-for="(slide, index) in slider.slides" v-bind:src="slide.imageUrl" v-show="index==slider.index" height="100%" width="100%" />
+      </div>
+    </div>
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBHbCmu6XAlxDDcjfZaWh6P4tvoY_EgMMU",
+      authDomain: "pi-reklam.firebaseapp.com",
+      databaseURL: "https://pi-reklam.firebaseio.com",
+      projectId: "pi-reklam",
+      storageBucket: "pi-reklam.appspot.com",
+      messagingSenderId: "460806227224"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+    require('./main.js')
+
+  </script>
+</html>
