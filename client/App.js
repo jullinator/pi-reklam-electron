@@ -1,4 +1,4 @@
-var Slider = require('./slider')
+var Slider = require('./Slider')
 
 const App = new Vue({
     el:'#app',
